@@ -3,7 +3,7 @@ from flask_cors import CORS
 import requests
 
 # Flask setup
-app = Flask(_name_)
+app = Flask(__name__)
 CORS(app)
 
 
@@ -18,24 +18,26 @@ API_CREDENTIALS = {
     "ownerEmail": "rahul@abc.edu",
     "rollNo": "1"
 }
+
+# Auth Token Data
 AUTH_TOKEN_DATA = {}
 
 
 # REST API's
 @app.route("/")
-def index():
-    return jsonify({"hello":"hello"})
+def home():
+    return jsonify({"hello":"world"})
 
 
-@app.route("/get-auth-token")
-def get_auth():
+@app.route("/authtoken")
+def get_auth_token():
     global AUTH_TOKEN_DATA
     response = requests.post(f'{BASE_URL}/train/auth', json=API_CREDENTIALS)
     AUTH_TOKEN_DATA = response.json()
     return AUTH_TOKEN_DATA
 
-@app.route("/getAllTrains")
-def get_alltrains():
+@app.route("/All_trains")
+def get_all_trains():
     try:
         headers = {
             'Authorization': f'Bearer {AUTH_TOKEN_DATA["access_token"]}'
@@ -43,5 +45,8 @@ def get_alltrains():
         response = requests.get(f'{BASE_URL}/train/trains', headers=headers)
         return response.json()
     except Exception as e:
-        get_auth()
-        return redirect(url_for('get_alltrains'))
+        get_auth_token()
+        return redirect(url_for('get_all_trains'))
+        
+if __name__=="__main__":
+    app.run(debug=True,port=8000)
