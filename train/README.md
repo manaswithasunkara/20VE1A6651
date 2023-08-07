@@ -1,7 +1,6 @@
 ![Screenshot 2023-08-07 130804](https://github.com/manaswithasunkara/20VE1A6651/assets/105747595/e28983cb-46ed-4cf6-8563-79929740a4b2)
-![Uploading Screenshot 2023-08-07 130036.png…]()
-![Uploading Screenshot 2023-08-07 122859.png…]()
-![Uploading Screenshot 2023-08-07 121930.png…]()
-
-![Uploading Screenshot 2023-08-07 121130.png…]()
-![Uploading Screenshot 2023-08-07 120900.png…]()
+![Screenshot 2023-08-07 130036](https://github.com/manaswithasunkara/20VE1A6651/assets/105747595/a2d488f6-54df-4fa4-901a-62fd7080228b)
+![Screenshot 2023-08-07 122859](https://github.com/manaswithasunkara/20VE1A6651/assets/105747595/16a1b69b-3384-425e-9837-54191c691cc1)
+![Screenshot 2023-08-07 121930](https://github.com/manaswithasunkara/20VE1A6651/assets/105747595/68fba59e-281b-459e-9732-a21993ae7c78)
+![Screenshot 2023-08-07 121130](https://github.com/manaswithasunkara/20VE1A6651/assets/105747595/2e10fb52-389e-4ff5-91a7-f6bbc411ae41)
+![Screenshot 2023-08-07 120900](https://github.com/manaswithasunkara/20VE1A6651/assets/105747595/efae3111-c3e9-4b47-be29-ace1fe1103d0)
