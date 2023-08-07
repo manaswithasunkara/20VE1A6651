@@ -25,19 +25,19 @@ AUTH_TOKEN_DATA = {}
 
 # REST API's
 @app.route("/")
-def home():
+def index():
     return jsonify({"hello":"world"})
 
 
 @app.route("/authtoken")
-def get_auth_token():
+def auth_token():
     global AUTH_TOKEN_DATA
     response = requests.post(f'{BASE_URL}/train/auth', json=API_CREDENTIALS)
     AUTH_TOKEN_DATA = response.json()
     return AUTH_TOKEN_DATA
 
 @app.route("/All_trains")
-def get_all_trains():
+def all_trains():
     try:
         headers = {
             'Authorization': f'Bearer {AUTH_TOKEN_DATA["access_token"]}'
@@ -45,8 +45,8 @@ def get_all_trains():
         response = requests.get(f'{BASE_URL}/train/trains', headers=headers)
         return response.json()
     except Exception as e:
-        get_auth_token()
-        return redirect(url_for('get_all_trains'))
+        auth_token()
+        return redirect(url_for('all_trains'))
         
 if __name__=="__main__":
     app.run(debug=True,port=8000)
